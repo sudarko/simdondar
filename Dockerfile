@@ -1,2 +1,2 @@
-From nimmis/alpine-apache-php5
-ADD code /web/html/
+From cespi/php-5.3:apache
+ADD code /code
