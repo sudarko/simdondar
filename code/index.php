@@ -1,4 +1,4 @@
-<img src="simdondar.png"/>
+<img src="simdondar.jpg"/>
 <?php
 phpinfo();
 ?>
