@@ -1,14 +1,14 @@
 ---
 
-version: '2'
+version: '3.8'
 
 services:
   webserver:
     build: https://github.com/sudarko/simdondar.git
     hostname: simdondar
     volumes:
-      - "upload:/var/www/upload"
-#      - "/home/upload:/var/www/upload"
+    - upload:/var/www/upload
+#    - /home/upload:/var/www/upload
     ports:
       - "8085:80"
 
@@ -22,3 +22,6 @@ services:
       MYSQL_ROOT_PASSWORD: example
     ports:
       - "3333:3306"
+volumes:
+  upload:
+  database:
