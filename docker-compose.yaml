@@ -1,0 +1,19 @@
+---
+
+version: '2'
+
+services:
+  webserver:
+    build: https://github.com/sudarko/simdondar.git
+    hostname: simdondar
+    ports:
+      - "8085:80"
+
+  database:
+    image: mysql:5.5
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "3333:3306"
