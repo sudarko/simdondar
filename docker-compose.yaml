@@ -6,6 +6,9 @@ services:
   webserver:
     build: https://github.com/sudarko/simdondar.git
     hostname: simdondar
+    volumes:
+      - "upload:/var/www/upload"
+#      - "/home/upload:/var/www/upload"
     ports:
       - "8085:80"
 
@@ -13,6 +16,8 @@ services:
     image: mysql:5.5
     command: --default-authentication-plugin=mysql_native_password
     restart: always
+    volumes:
+      - "database:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: example
     ports:
