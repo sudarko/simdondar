@@ -2,19 +2,20 @@
 <?php
 echo "try update";
 echo "test 123";
-$servername = "database";
-$username = "root";
-$password = "example";
+$conn = mysql_connect('database', 'root', 'example');
+mysql_select_db("mysql");
+if (!$conn) {
+die('ERROR: Unable to connect: ' . mysql_error());
+}
 
-// Create connection
+echo 'Connected to the database.<br>';
 /*
-$conn = new mysqli($servername, $username, $password);
+$result = mysql_query('SELECT name FROM employee');
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
+$row = mysql_fetch_row($result);
+echo "Employee 1: ", $row[0], "<br>\n";
 */
-echo "Connected successfully";
+mysql_close($conn);
+
 phpinfo();
 ?>
