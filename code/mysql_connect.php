@@ -1,6 +1,6 @@
 <?php
-$conn = mysql_connect($host, $user, $pass);
-mysql_select_db($db);
+$conn = mysql_connect($host, $username, $password);
+mysql_select_db($dbname);
 if (!$conn) {
 die('ERROR: Unable to connect: ' . mysql_error());
 }
