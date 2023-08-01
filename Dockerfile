@@ -23,6 +23,6 @@ RUN apk update && apk add --no-cache \
 
 #RUN apk add libzip-dev
 
-RUN docker-php-ext-install mysqli pdo pdo_mysql \
+RUN docker-php-ext-install mysql mysqli pdo pdo_mysql \
      && docker-php-ext-enable pdo_mysql
 ADD code /var/www/html/
