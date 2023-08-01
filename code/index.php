@@ -2,7 +2,7 @@
 <?php
 echo "try update";
 echo "test 123";
-/*
+
 $conn = mysql_connect('database', 'root', 'example');
 mysql_select_db("mysql");
 if (!$conn) {
@@ -12,7 +12,7 @@ die('ERROR: Unable to connect: ' . mysql_error());
 echo 'Connected to the database.<br>';
 
 mysql_close($conn);
-*/
+/**/
 $servername = "database";
 $username = "root";
 $password = "example";
