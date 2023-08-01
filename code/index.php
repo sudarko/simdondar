@@ -10,8 +10,9 @@ die('ERROR: Unable to connect: ' . mysql_error());
 }
 
 echo 'Connected to the database.<br>';
-mysql_close($conn);
 
+mysql_close($conn);
+*/
 $servername = "database";
 $username = "root";
 $password = "example";
@@ -24,6 +25,5 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 echo "Connected successfully";
-*/
 phpinfo();
 ?>
