@@ -1,4 +1,5 @@
 <?php
+require_once 'dbconfig.php';
 $conn = mysql_connect($host, $username, $password);
 mysql_select_db($dbname);
 if (!$conn) {
