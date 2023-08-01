@@ -5,7 +5,6 @@ version: '3.1'
 services:
   webserver:
     build: https://github.com/sudarko/simdondar.git
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
     - upload:/var/www/upload
