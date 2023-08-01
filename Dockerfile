@@ -20,7 +20,7 @@ RUN apk update && apk add --no-cache \
       libpng-dev \
     && rm -rf /tmp/*
 
-RUN apk add libzip-dev
+#RUN apk add libzip-dev
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql \
      && docker-php-ext-enable pdo_mysql
