@@ -5,5 +5,5 @@ EOF
 then
 	echo 'No new Update'
 else
-	docker-compose up -d
+	docker-compose restart webserver
 fi
