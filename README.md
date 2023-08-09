@@ -1,3 +1,4 @@
+**Cara install simdondar docker di server udd (langkah-langkah hanya perlu dilakukan 1 X diawal saja)**
 1. Install salah satu Ubuntu server 64 bit berikut:
    - Ubuntu Lunar 23.04
    - Ubuntu Kinetic 22.10
@@ -19,3 +20,12 @@
    - wget https://raw.githubusercontent.com/sudarko/simdondar/master/cron-simdondar.sh
    - sudo cp cron-simdondar.sh /etc/cron.daily/
    - sudo service cron restart
+
+**Cara update simdondar oleh tim developer**
+1. lakukan perbaikan sorcecode kemudian push ke github
+2. build image baru:
+   - docker build -t sudarko/simdondar:latest https://github.com/sudarko/simdondar.git
+3. push image baru ke docker registry:
+   - docker login
+   - docker push sudarko/simdondar:latest
+4. pada server udd secara otomatis akan terjadi update sesuai dengan jadwal cron harian (**setelah langkah nomor 8 dilakukan**)
