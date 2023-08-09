@@ -5,7 +5,7 @@ version: '3.1'
 services:
   webserver:
     image: sudarko/simdondar:latest
-    pull_policy: always
+    #pull_policy: always
     #build: https://github.com/sudarko/simdondar.git
     restart: always
     volumes:
