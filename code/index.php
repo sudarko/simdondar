@@ -1,4 +1,5 @@
 <img src="simdondar.jpg"/>
+Versi 1.0<br>
 Test koneksi ke DB:<br>
 TEST EDIT 08-08-23 NEW<br>
 Update 09-08-23 <br>
