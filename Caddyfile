@@ -1,0 +1,6 @@
+simdondar-bali.utdp-pmi.or.id {
+    reverse_proxy 10.124.47.191:8085
+}
+simdondar-jember.utdp-pmi.or.id {
+    reverse_proxy 10.124.47.192:8085
+}
