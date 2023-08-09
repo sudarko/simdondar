@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+
+  # Web proxy for SSL termination
+  caddy:
+    image: docker.io/caddy:2.2.1-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./data:/data
