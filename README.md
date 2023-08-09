@@ -29,3 +29,15 @@
    - docker login
    - docker push sudarko/simdondar:latest
 4. pada server udd secara otomatis akan terjadi update sesuai dengan jadwal cron harian (**setelah langkah nomor 8 dilakukan**)
+
+**Cara install dan konfigurasi https/ssl reverse proxy dengan caddy di SERVER dengan IP PUBLIC:**
+1. buat directory caddy:
+   - mkdir caddy
+   - cd caddy
+2. download caddy_docker-compose.yaml dan contoh file konfigurasi caddy
+   - wget https://raw.githubusercontent.com/sudarko/simdondar/master/caddy_docker-compose.yaml
+   - mv caddy_docker-compose.yaml docker-compose.yaml
+   - wget https://raw.githubusercontent.com/sudarko/simdondar/master/Caddyfile
+3. edit Caddyfile (sesuaikan nama subdomain dan IP server simdondar)
+4. Jalankan caddy
+   - docker-compose up -d
